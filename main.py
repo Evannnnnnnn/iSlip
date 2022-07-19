@@ -29,12 +29,14 @@ def openSerial():
         # Add x and y to lists
         xs.append(dt.datetime.now().strftime('%H:%M:%S.%f'))
         y1s.append(pressure1)
-        print(y1s)
         y2s.append(pressure2)
         # Limit x and y lists to 20 items
         xs = xs[-20:]
         y1s = y1s[-20:]
         y2s = y2s[-20:]
+        print("Time: " + xs[-1])
+        print("Back: " + str(y1s[-1]))
+        print("Front: " + str(y2s[-1]))
 
 
 def animate(i):
